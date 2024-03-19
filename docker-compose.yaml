@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  caddy:
+    image: caddy:2.7.4-alpine
+
+  backend:
+    build:
+      context: .
+    command:
+      ["granian", "app:src.main", "--host=$SERVER_HOST", "--port=$SERVER_PORT"]
+    ports:
+      - "$SERVER_PORT:$LOCAL_SERVER_PORT"
