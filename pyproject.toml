@@ -2,7 +2,7 @@
 name = "andrew-site"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Work Hardes <arckadyor34@google.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -15,6 +15,7 @@ granian = "^1.2.0"
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.3.3"
 mypy = "^1.9.0"
+pre-commit = "^3.6.2"
 
 [build-system]
 requires = ["poetry-core"]
@@ -31,9 +32,13 @@ plugins = ["pydantic.mypy"]
 exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", "services"]
 
 [tool.ruff]
-ignore-init-module-imports = true
+exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", "services"]
 line-length = 95
+indent-width = 4
 target-version = "py311"
+
+[tool.ruff.lint]
+ignore-init-module-imports = true
 select = [
     "F",     # pyflakes
     "E",     # pycodestyle errors
@@ -82,18 +87,23 @@ ignore = [
     "PLW0603", # Using the global statement to update `` is discouraged
     "TRY300",  # Checks for return statements in try blocks.
 ]
-exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", "services"]
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.per-file-ignores]
 # imported but unused; consider adding to __all__ or using a redundant alias
 "__init__.py" = ["F401"]
 # Missing return type annotation for public function get_settings
 "src/core/settings.py" = ["ANN201"]
 
-[tool.ruff.flake8-unused-arguments]
+[tool.ruff.lint.flake8-unused-arguments]
 ignore-variadic-names = true
 
-[tool.ruff.flake8-bugbear]
+[tool.ruff.lint.flake8-bugbear]
 extend-immutable-calls = [
     "fastapi.Depends",
     "fastapi.params.Depends",

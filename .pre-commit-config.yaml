@@ -9,33 +9,24 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
       - id: debug-statements
-        language_version: python3
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.6
+    rev: v0.3.3
     hooks:
       - id: ruff
         files: src
-        args: [--fix]
-  - repo: https://github.com/psf/black
-    rev: 23.11.0
-    hooks:
-      - id: black
+        args: ["--fix"]
+      - id: ruff-format
         files: src
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.7.0
+    rev: v1.9.0
     hooks:
       - id: mypy
         files: src
-        args: [--install-types, --non-interactive]
+        args: ["--install-types", "--non-interactive"]
         additional_dependencies:
-          - pydantic==2.5.2
-  - repo: https://github.com/hadolint/hadolint
-    rev: v2.12.1-beta
-    hooks:
-      - id: hadolint
-        args: ["--config", "./services/hadolint/hadolint.yaml"]
+          - pydantic==2.6.4
   - repo: https://github.com/python-poetry/poetry
-    rev: 1.7.1
+    rev: 1.8.0
     hooks:
       - id: poetry-check
       - id: poetry-lock
@@ -47,4 +38,3 @@ repos:
       - id: poetry-install
 default_language_version:
   python: python3.11
-exclude: services

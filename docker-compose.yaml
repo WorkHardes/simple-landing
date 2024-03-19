@@ -1,12 +1,24 @@
 version: "3.8"
 services:
   caddy:
-    image: caddy:2.7.4-alpine
+    build:
+      context: ./static
+    container_name: caddy
+    command:
+      ["caddy", "file-server", "--listen=:${CADDY_PORT}", "--root=/static"]
+    ports:
+      - "${LOCAL_CADDY_PORT}:${CADDY_PORT}"
 
   backend:
     build:
       context: .
+    container_name: backend
     command:
-      ["granian", "app:src.main", "--host=$SERVER_HOST", "--port=$SERVER_PORT"]
+      [
+        "granian",
+        "app:src.main",
+        "--host=${SERVER_HOST}",
+        "--port=${SERVER_PORT}",
+      ]
     ports:
-      - "$SERVER_PORT:$LOCAL_SERVER_PORT"
+      - "${LOCAL_SERVER_PORT}:${SERVER_PORT}"
