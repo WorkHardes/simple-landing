@@ -1,15 +1,16 @@
 [tool.poetry]
-name = "andrew-site"
+name = "simple-landing"
 version = "0.1.0"
 description = ""
 authors = ["Work Hardes <arckadyor34@google.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "3.12.2"
 fastapi = "^0.110.0"
 pydantic = "^2.6.4"
 granian = "^1.2.0"
+pydantic-settings = "^2.2.1"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -22,7 +23,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.12"
 ignore_missing_imports = true
 warn_no_return = false
 warn_unreachable = true
@@ -35,7 +36,7 @@ exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", "services"]
 exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", "services"]
 line-length = 95
 indent-width = 4
-target-version = "py311"
+target-version = "py312"
 
 [tool.ruff.lint]
 ignore-init-module-imports = true

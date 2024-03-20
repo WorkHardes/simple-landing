@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  caddy:
+    extends:
+      file: compose-base.yaml
+      service: caddy
+    env_file: ../env_files/.env
+
+  backend:
+    extends:
+      file: compose-base.yaml
+      service: backend
+    env_file: ../env_files/.env

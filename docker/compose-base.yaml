@@ -1,11 +1,9 @@
 version: "3.8"
-
 services:
   caddy:
     build:
-      context: ./static
+      context: ../static
     container_name: caddy
-    env_file: ../env_files/.env
     command:
       ["caddy", "file-server", "--listen=:${CADDY_PORT}", "--root=/static"]
     ports:
@@ -13,9 +11,8 @@ services:
 
   backend:
     build:
-      context: .
+      context: ../
     container_name: backend
-    env_file: ../env_files/.env
     command:
       [
         "granian",
