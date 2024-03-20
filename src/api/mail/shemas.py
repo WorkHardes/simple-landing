@@ -2,4 +2,5 @@ from pydantic import BaseModel
 
 
 class MailToSend(BaseModel):
-    text: str
+    email: str
+    msg: str

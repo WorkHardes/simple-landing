@@ -1,10 +1,26 @@
+from collections.abc import AsyncIterator
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI, HTTPException, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.api.mail.router import router as mail_router
+from src.api.mail.use_cases import smtp_client
 from src.core.exception_handlers import http422_error_handler, http_error_handler
 from src.core.settings import settings
+
+
+@asynccontextmanager
+async def lifespan(_: FastAPI) -> AsyncIterator[None]:
+    smtp_client.starttls()
+    smtp_client.login(settings.MAIL_USERNAME, settings.MAIL_PASSWORD)
+
+    yield
+
+    print(1)
+    smtp_client.quit()
+    print(2)
 
 
 def create_app() -> FastAPI:
@@ -13,6 +29,7 @@ def create_app() -> FastAPI:
         title="MSF web API",
         description="Rest API for simple landing",
         version="0.1.0",
+        lifespan=lifespan,
     )
 
     app.add_middleware(
