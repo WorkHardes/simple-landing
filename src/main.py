@@ -18,9 +18,7 @@ async def lifespan(_: FastAPI) -> AsyncIterator[None]:
 
     yield
 
-    print(1)
     smtp_client.quit()
-    print(2)
 
 
 def create_app() -> FastAPI:

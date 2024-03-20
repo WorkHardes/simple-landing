@@ -6,7 +6,7 @@ from fastapi.responses import ORJSONResponse
 from src.schemas import ErrorMessage
 
 
-async def http_error_handler(_: Request, exc: HTTPException) -> ORJSONResponse:
+def http_error_handler(_: Request, exc: HTTPException) -> ORJSONResponse:
     return ORJSONResponse(
         content=ErrorMessage(
             code=exc.status_code,
@@ -16,7 +16,7 @@ async def http_error_handler(_: Request, exc: HTTPException) -> ORJSONResponse:
     )
 
 
-async def http422_error_handler(
+def http422_error_handler(
     _: Request,
     req: RequestValidationError,
 ) -> ORJSONResponse:

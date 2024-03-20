@@ -6,7 +6,6 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     # server
     DEBUG: bool
-    LOGGER_CONFIG_FILE_PATH: str
 
     # mail
     MAIL_HOST: str
