@@ -15,5 +15,5 @@ router = APIRouter(tags=["mail"])
         status.HTTP_500_INTERNAL_SERVER_ERROR: {"model": ErrorMessage},
     },
 )
-def add_account_telegram(body: MailToSend) -> None | ErrorMessage:
-    send_mail(body.email, body.msg)
+def add_account_telegram(mail_to_send: MailToSend) -> None | ErrorMessage:
+    send_mail(mail_to_send)
