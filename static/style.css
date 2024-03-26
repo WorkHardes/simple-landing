@@ -15,3 +15,7 @@ main .container h2:before {
 footer .container {
   padding-top: 4em;
 }
+
+main .container #carouselCaptions .carousel-inner .carousel-item {
+  height: 600px;
+}
