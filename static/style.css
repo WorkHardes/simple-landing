@@ -1,6 +1,6 @@
-header nav {
-  margin-left: 12em;
-  margin-right: 12em;
+header .container nav {
+  padding-left: 12em;
+  padding-right: 12em;
 }
 
 header nav .navbar-collapse ul {
