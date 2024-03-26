@@ -11,8 +11,10 @@ header nav .navbar-collapse ul li {
   margin-left: 2em;
 }
 
-main {
-  margin-top: 10em;
+main .container h2:before {
+  height: 4em;
+  content: "";
+  display: block;
 }
 
 footer .container {
