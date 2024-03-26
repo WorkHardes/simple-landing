@@ -16,6 +16,19 @@ footer .container {
   padding-top: 4em;
 }
 
-main .container #carouselCaptions .carousel-inner .carousel-item {
+main .carousel-item {
   height: 600px;
+}
+
+main .gallery img {
+  background: #fff;
+  padding: 15px;
+  max-width: 100%;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4em;
+}
+
+#gallery-popup .modal-img {
+  width: 100%;
 }

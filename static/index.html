@@ -228,13 +228,13 @@
           </button>
         </div>
       </div>
-      <div class="container">
+      <div class="container gallery">
         <h2 id="reviews" class="text-center">Отзывы</h2>
         <div class="row">
           <div class="col">
             <img
               src="./img/opalubka-types/1.jpg"
-              class="img-thumbnail"
+              class="gallery-item"
               alt="opalubka type 1"
             />
           </div>
@@ -243,14 +243,14 @@
               <div class="col">
                 <img
                   src="./img/opalubka-types/2.jpg"
-                  class="img-thumbnail"
+                  class="gallery-item"
                   alt="opalubka type 2"
                 />
               </div>
               <div class="col">
                 <img
                   src="./img/opalubka-types/3.jpg"
-                  class="img-thumbnail"
+                  class="gallery-item"
                   alt="opalubka type 3"
                 />
               </div>
@@ -259,16 +259,39 @@
               <div class="col">
                 <img
                   src="./img/opalubka-types/4.jpg"
-                  class="img-thumbnail"
+                  class="gallery-item"
                   alt="opalubka type 4"
                 />
               </div>
               <div class="col">
                 <img
                   src="./img/opalubka-types/5.jpg"
-                  class="img-thumbnail"
+                  class="gallery-item"
                   alt="opalubka type 5"
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="gallery-popup"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img class="modal-img" />
               </div>
             </div>
           </div>
