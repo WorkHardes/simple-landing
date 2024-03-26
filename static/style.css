@@ -1,0 +1,20 @@
+header nav {
+  margin-left: 12em;
+  margin-right: 12em;
+}
+
+header nav .navbar-collapse ul {
+  margin-left: 4em;
+}
+
+header nav .navbar-collapse ul li {
+  margin-left: 2em;
+}
+
+main {
+  margin-top: 10em;
+}
+
+footer .container {
+  padding-top: 4em;
+}

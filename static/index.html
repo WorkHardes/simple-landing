@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,248 +18,311 @@
   </head>
   <body>
     <header>
-      <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><img
-              src="./img/company-logo.png"
-              alt="Company logo"
-              height="64px"
-              class="d-inline-block align-text-top"
-            />Опалубка от Андрея
+      <nav
+        class="navbar fixed-top navbar-expand-lg bg-body-tertiary border-bottom"
+      >
+        <a class="navbar-brand" href="#"
+          ><img
+            src="./img/company-logo.png"
+            alt="Company logo"
+            height="70px"
+            class="d-inline-block align-text-top"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Переключатель навигации"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fs-4" aria-current="page" href="#photo"
+                >Фото</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="#reviews">Отзывы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="#contacts">Контакты</a>
+            </li>
+            <li class="nav-item"></li>
+          </ul>
+          <div class="text-end">
+            <a class="btn btn-primary" href="tel:+78120000000">
+              +7(812)-000-00-00
             </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Переключатель навигации"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#photo">Фото</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#reviews">Отзывы</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contacts">Контакты</a>
-              </li>
-              <li class="nav-item">
-              </li>
-            </ul>
-            <div class="text-end">
-              <a class="btn btn-primary" href="tel:+78120000000">
-                +7(812)-000-00-00
-              </a>
-              <a class="btn btn-secondary" href="https://t.me/andykenway" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
-                </svg>
-              </a>
-              <a class="btn btn-secondary" href="https://wa.me/+79522320376" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                  <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                </svg>
-              </a>
+            <a
+              class="btn btn-secondary"
+              href="https://t.me/andykenway"
+              target="_blank"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-telegram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
+                />
+              </svg>
+            </a>
+            <a
+              class="btn btn-secondary"
+              href="https://wa.me/+79522320376"
+              target="_blank"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-whatsapp"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="container" style="margin-top: 8em;">
-      <h2 id="photo">Фото</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit iste
-        dolorum impedit exercitationem ipsum quis aliquid maiores facilis illum
-        saepe. Id asperiores odit, doloribus quae laborum distinctio.
-        Exercitationem, perspiciatis voluptates?
-      </p>
-      <h2 id="reviews">Отзывы</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Semper feugiat nibh
-        sed pulvinar. Est velit egestas dui id ornare arcu odio ut sem. Lectus
-        nulla at volutpat diam ut venenatis tellus in metus. Adipiscing enim eu
-        turpis egestas pretium aenean. Lectus nulla at volutpat diam. Euismod
-        lacinia at quis risus sed vulputate odio. Viverra mauris in aliquam sem
-        fringilla ut morbi tincidunt augue. Bibendum est ultricies integer quis
-        auctor elit sed vulputate. Varius morbi enim nunc faucibus. Tincidunt
-        nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Sed
-        vulputate mi sit amet mauris. Ultricies lacus sed turpis tincidunt id
-        aliquet risus. Ultrices vitae auctor eu augue. Pellentesque adipiscing
-        commodo elit at imperdiet dui. Tortor at auctor urna nunc id cursus
-        metus. Pellentesque adipiscing commodo elit at. Non nisi est sit amet
-        facilisis magna etiam. Arcu dictum varius duis at. Lacus suspendisse
-        faucibus interdum posuere lorem ipsum dolor. Egestas congue quisque
-        egestas diam in arcu cursus euismod. Nisl condimentum id venenatis a
-        condimentum vitae. Ut faucibus pulvinar elementum integer enim neque
-        volutpat. Scelerisque varius morbi enim nunc faucibus a pellentesque.
-        Porta lorem mollis aliquam ut porttitor leo a diam. Cursus mattis
-        molestie a iaculis at erat pellentesque adipiscing commodo. Eget arcu
-        dictum varius duis at consectetur lorem donec. Posuere sollicitudin
-        aliquam ultrices sagittis. Duis at tellus at urna. Amet porttitor eget
-        dolor morbi non arcu risus quis varius. Vitae aliquet nec ullamcorper
-        sit amet risus nullam eget felis. Massa sed elementum tempus egestas.
-        Sed blandit libero volutpat sed cras ornare arcu dui. Ultrices dui
-        sapien eget mi proin sed libero. Adipiscing at in tellus integer
-        feugiat. Malesuada nunc vel risus commodo viverra maecenas accumsan
-        lacus vel. Dui accumsan sit amet nulla facilisi morbi tempus iaculis.
-        Pharetra vel turpis nunc eget. Vestibulum mattis ullamcorper velit sed
-        ullamcorper morbi tincidunt. Elit eget gravida cum sociis natoque
-        penatibus et magnis. Aliquet bibendum enim facilisis gravida neque
-        convallis a cras semper. Eu non diam phasellus vestibulum. Erat
-        pellentesque adipiscing commodo elit at imperdiet dui. Sodales ut eu sem
-        integer vitae justo eget. Tellus mauris a diam maecenas. Pulvinar mattis
-        nunc sed blandit libero volutpat. Rhoncus mattis rhoncus urna neque
-        viverra justo nec ultrices. Sed vulputate mi sit amet mauris commodo
-        quis imperdiet. Pharetra diam sit amet nisl suscipit adipiscing. Diam
-        maecenas ultricies mi eget mauris pharetra et ultrices neque. Feugiat
-        pretium nibh ipsum consequat nisl vel pretium lectus quam. Volutpat est
-        velit egestas dui id ornare arcu. In est ante in nibh mauris cursus
-        mattis. Pellentesque elit eget gravida cum. Purus viverra accumsan in
-        nisl nisi scelerisque eu. Nunc vel risus commodo viverra maecenas
-        accumsan lacus vel facilisis. Et sollicitudin ac orci phasellus egestas
-        tellus rutrum tellus. Pharetra vel turpis nunc eget lorem dolor.
-        Dignissim enim sit amet venenatis urna cursus eget nunc scelerisque.
-        Ornare aenean euismod elementum nisi quis eleifend quam. Augue eget arcu
-        dictum varius duis. Purus viverra accumsan in nisl nisi scelerisque eu
-        ultrices vitae. Elementum pulvinar etiam non quam lacus suspendisse
-        faucibus interdum. Porta non pulvinar neque laoreet suspendisse interdum
-        consectetur libero id. Neque convallis a cras semper auctor neque vitae.
-        Ultrices in iaculis nunc sed. Sed faucibus turpis in eu mi bibendum
-        neque egestas. Eleifend quam adipiscing vitae proin. Aliquam malesuada
-        bibendum arcu vitae elementum. Cursus in hac habitasse platea dictumst.
-        Rhoncus dolor purus non enim. Arcu non odio euismod lacinia at quis.
-        Velit dignissim sodales ut eu sem. Quam viverra orci sagittis eu
-        volutpat odio facilisis mauris. Semper quis lectus nulla at volutpat.
-        Pulvinar sapien et ligula ullamcorper malesuada. Aliquam etiam erat
-        velit scelerisque. Est sit amet facilisis magna etiam tempor orci eu
-        lobortis. Nullam non nisi est sit amet facilisis.
-      </p>
-      <h2 id="contacts">Контакты</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Semper feugiat nibh
-        sed pulvinar. Est velit egestas dui id ornare arcu odio ut sem. Lectus
-        nulla at volutpat diam ut venenatis tellus in metus. Adipiscing enim eu
-        turpis egestas pretium aenean. Lectus nulla at volutpat diam. Euismod
-        lacinia at quis risus sed vulputate odio. Viverra mauris in aliquam sem
-        fringilla ut morbi tincidunt augue. Bibendum est ultricies integer quis
-        auctor elit sed vulputate. Varius morbi enim nunc faucibus. Tincidunt
-        nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Sed
-        vulputate mi sit amet mauris. Ultricies lacus sed turpis tincidunt id
-        aliquet risus. Ultrices vitae auctor eu augue. Pellentesque adipiscing
-        commodo elit at imperdiet dui. Tortor at auctor urna nunc id cursus
-        metus. Pellentesque adipiscing commodo elit at. Non nisi est sit amet
-        facilisis magna etiam. Arcu dictum varius duis at. Lacus suspendisse
-        faucibus interdum posuere lorem ipsum dolor. Egestas congue quisque
-        egestas diam in arcu cursus euismod. Nisl condimentum id venenatis a
-        condimentum vitae. Ut faucibus pulvinar elementum integer enim neque
-        volutpat. Scelerisque varius morbi enim nunc faucibus a pellentesque.
-        Porta lorem mollis aliquam ut porttitor leo a diam. Cursus mattis
-        molestie a iaculis at erat pellentesque adipiscing commodo. Eget arcu
-        dictum varius duis at consectetur lorem donec. Posuere sollicitudin
-        aliquam ultrices sagittis. Duis at tellus at urna. Amet porttitor eget
-        dolor morbi non arcu risus quis varius. Vitae aliquet nec ullamcorper
-        sit amet risus nullam eget felis. Massa sed elementum tempus egestas.
-        Sed blandit libero volutpat sed cras ornare arcu dui. Ultrices dui
-        sapien eget mi proin sed libero. Adipiscing at in tellus integer
-        feugiat. Malesuada nunc vel risus commodo viverra maecenas accumsan
-        lacus vel. Dui accumsan sit amet nulla facilisi morbi tempus iaculis.
-        Pharetra vel turpis nunc eget. Vestibulum mattis ullamcorper velit sed
-        ullamcorper morbi tincidunt. Elit eget gravida cum sociis natoque
-        penatibus et magnis. Aliquet bibendum enim facilisis gravida neque
-        convallis a cras semper. Eu non diam phasellus vestibulum. Erat
-        pellentesque adipiscing commodo elit at imperdiet dui. Sodales ut eu sem
-        integer vitae justo eget. Tellus mauris a diam maecenas. Pulvinar mattis
-        nunc sed blandit libero volutpat. Rhoncus mattis rhoncus urna neque
-        viverra justo nec ultrices. Sed vulputate mi sit amet mauris commodo
-        quis imperdiet. Pharetra diam sit amet nisl suscipit adipiscing. Diam
-        maecenas ultricies mi eget mauris pharetra et ultrices neque. Feugiat
-        pretium nibh ipsum consequat nisl vel pretium lectus quam. Volutpat est
-        velit egestas dui id ornare arcu. In est ante in nibh mauris cursus
-        mattis. Pellentesque elit eget gravida cum. Purus viverra accumsan in
-        nisl nisi scelerisque eu. Nunc vel risus commodo viverra maecenas
-        accumsan lacus vel facilisis. Et sollicitudin ac orci phasellus egestas
-        tellus rutrum tellus. Pharetra vel turpis nunc eget lorem dolor.
-        Dignissim enim sit amet venenatis urna cursus eget nunc scelerisque.
-        Ornare aenean euismod elementum nisi quis eleifend quam. Augue eget arcu
-        dictum varius duis. Purus viverra accumsan in nisl nisi scelerisque eu
-        ultrices vitae. Elementum pulvinar etiam non quam lacus suspendisse
-        faucibus interdum. Porta non pulvinar neque laoreet suspendisse interdum
-        consectetur libero id. Neque convallis a cras semper auctor neque vitae.
-        Ultrices in iaculis nunc sed. Sed faucibus turpis in eu mi bibendum
-        neque egestas. Eleifend quam adipiscing vitae proin. Aliquam malesuada
-        bibendum arcu vitae elementum. Cursus in hac habitasse platea dictumst.
-        Rhoncus dolor purus non enim. Arcu non odio euismod lacinia at quis.
-        Velit dignissim sodales ut eu sem. Quam viverra orci sagittis eu
-        volutpat odio facilisis mauris. Semper quis lectus nulla at volutpat.
-        Pulvinar sapien et ligula ullamcorper malesuada. Aliquam etiam erat
-        velit scelerisque. Est sit amet facilisis magna etiam tempor orci eu
-        lobortis. Nullam non nisi est sit amet facilisis.
-      </p>
+    <main>
+      <div class="container">
+        <h2 id="photo" class="text-center">Фото</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit iste
+          dolorum impedit exercitationem ipsum quis aliquid maiores facilis
+          illum saepe. Id asperiores odit, doloribus quae laborum distinctio.
+          Exercitationem, perspiciatis voluptates?
+        </p>
+      </div>
+      <div class="container">
+        <h2 id="reviews" class="text-center">Отзывы</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper
+          feugiat nibh sed pulvinar. Est velit egestas dui id ornare arcu odio
+          ut sem. Lectus nulla at volutpat diam ut venenatis tellus in metus.
+          Adipiscing enim eu turpis egestas pretium aenean. Lectus nulla at
+          volutpat diam. Euismod lacinia at quis risus sed vulputate odio.
+          Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue.
+          Bibendum est ultricies integer quis auctor elit sed vulputate. Varius
+          morbi enim nunc faucibus. Tincidunt nunc pulvinar sapien et ligula
+          ullamcorper malesuada proin libero. Sed vulputate mi sit amet mauris.
+          Ultricies lacus sed turpis tincidunt id aliquet risus. Ultrices vitae
+          auctor eu augue. Pellentesque adipiscing commodo elit at imperdiet
+          dui. Tortor at auctor urna nunc id cursus metus. Pellentesque
+          adipiscing commodo elit at. Non nisi est sit amet facilisis magna
+          etiam. Arcu dictum varius duis at. Lacus suspendisse faucibus interdum
+          posuere lorem ipsum dolor. Egestas congue quisque egestas diam in arcu
+          cursus euismod. Nisl condimentum id venenatis a condimentum vitae. Ut
+          faucibus pulvinar elementum integer enim neque volutpat. Scelerisque
+          varius morbi enim nunc faucibus a pellentesque. Porta lorem mollis
+          aliquam ut porttitor leo a diam. Cursus mattis molestie a iaculis at
+          erat pellentesque adipiscing commodo. Eget arcu dictum varius duis at
+          consectetur lorem donec. Posuere sollicitudin aliquam ultrices
+          sagittis. Duis at tellus at urna. Amet porttitor eget dolor morbi non
+          arcu risus quis varius. Vitae aliquet nec ullamcorper sit amet risus
+          nullam eget felis. Massa sed elementum tempus egestas. Sed blandit
+          libero volutpat sed cras ornare arcu dui. Ultrices dui sapien eget mi
+          proin sed libero. Adipiscing at in tellus integer feugiat. Malesuada
+          nunc vel risus commodo viverra maecenas accumsan lacus vel. Dui
+          accumsan sit amet nulla facilisi morbi tempus iaculis. Pharetra vel
+          turpis nunc eget. Vestibulum mattis ullamcorper velit sed ullamcorper
+          morbi tincidunt. Elit eget gravida cum sociis natoque penatibus et
+          magnis. Aliquet bibendum enim facilisis gravida neque convallis a cras
+          semper. Eu non diam phasellus vestibulum. Erat pellentesque adipiscing
+          commodo elit at imperdiet dui. Sodales ut eu sem integer vitae justo
+          eget. Tellus mauris a diam maecenas. Pulvinar mattis nunc sed blandit
+          libero volutpat. Rhoncus mattis rhoncus urna neque viverra justo nec
+          ultrices. Sed vulputate mi sit amet mauris commodo quis imperdiet.
+          Pharetra diam sit amet nisl suscipit adipiscing. Diam maecenas
+          ultricies mi eget mauris pharetra et ultrices neque. Feugiat pretium
+          nibh ipsum consequat nisl vel pretium lectus quam. Volutpat est velit
+          egestas dui id ornare arcu. In est ante in nibh mauris cursus mattis.
+          Pellentesque elit eget gravida cum. Purus viverra accumsan in nisl
+          nisi scelerisque eu. Nunc vel risus commodo viverra maecenas accumsan
+          lacus vel facilisis. Et sollicitudin ac orci phasellus egestas tellus
+          rutrum tellus. Pharetra vel turpis nunc eget lorem dolor. Dignissim
+          enim sit amet venenatis urna cursus eget nunc scelerisque. Ornare
+          aenean euismod elementum nisi quis eleifend quam. Augue eget arcu
+          dictum varius duis. Purus viverra accumsan in nisl nisi scelerisque eu
+          ultrices vitae. Elementum pulvinar etiam non quam lacus suspendisse
+          faucibus interdum. Porta non pulvinar neque laoreet suspendisse
+          interdum consectetur libero id. Neque convallis a cras semper auctor
+          neque vitae. Ultrices in iaculis nunc sed. Sed faucibus turpis in eu
+          mi bibendum neque egestas. Eleifend quam adipiscing vitae proin.
+          Aliquam malesuada bibendum arcu vitae elementum. Cursus in hac
+          habitasse platea dictumst. Rhoncus dolor purus non enim. Arcu non odio
+          euismod lacinia at quis. Velit dignissim sodales ut eu sem. Quam
+          viverra orci sagittis eu volutpat odio facilisis mauris. Semper quis
+          lectus nulla at volutpat. Pulvinar sapien et ligula ullamcorper
+          malesuada. Aliquam etiam erat velit scelerisque. Est sit amet
+          facilisis magna etiam tempor orci eu lobortis. Nullam non nisi est sit
+          amet facilisis.
+        </p>
+      </div>
+      <div class="container">
+        <h2 id="contacts" class="text-center">Контакты</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper
+          feugiat nibh sed pulvinar. Est velit egestas dui id ornare arcu odio
+          ut sem. Lectus nulla at volutpat diam ut venenatis tellus in metus.
+          Adipiscing enim eu turpis egestas pretium aenean. Lectus nulla at
+          volutpat diam. Euismod lacinia at quis risus sed vulputate odio.
+          Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue.
+          Bibendum est ultricies integer quis auctor elit sed vulputate. Varius
+          morbi enim nunc faucibus. Tincidunt nunc pulvinar sapien et ligula
+          ullamcorper malesuada proin libero. Sed vulputate mi sit amet mauris.
+          Ultricies lacus sed turpis tincidunt id aliquet risus. Ultrices vitae
+          auctor eu augue. Pellentesque adipiscing commodo elit at imperdiet
+          dui. Tortor at auctor urna nunc id cursus metus. Pellentesque
+          adipiscing commodo elit at. Non nisi est sit amet facilisis magna
+          etiam. Arcu dictum varius duis at. Lacus suspendisse faucibus interdum
+          posuere lorem ipsum dolor. Egestas congue quisque egestas diam in arcu
+          cursus euismod. Nisl condimentum id venenatis a condimentum vitae. Ut
+          faucibus pulvinar elementum integer enim neque volutpat. Scelerisque
+          varius morbi enim nunc faucibus a pellentesque. Porta lorem mollis
+          aliquam ut porttitor leo a diam. Cursus mattis molestie a iaculis at
+          erat pellentesque adipiscing commodo. Eget arcu dictum varius duis at
+          consectetur lorem donec. Posuere sollicitudin aliquam ultrices
+          sagittis. Duis at tellus at urna. Amet porttitor eget dolor morbi non
+          arcu risus quis varius. Vitae aliquet nec ullamcorper sit amet risus
+          nullam eget felis. Massa sed elementum tempus egestas. Sed blandit
+          libero volutpat sed cras ornare arcu dui. Ultrices dui sapien eget mi
+          proin sed libero. Adipiscing at in tellus integer feugiat. Malesuada
+          nunc vel risus commodo viverra maecenas accumsan lacus vel. Dui
+          accumsan sit amet nulla facilisi morbi tempus iaculis. Pharetra vel
+          turpis nunc eget. Vestibulum mattis ullamcorper velit sed ullamcorper
+          morbi tincidunt. Elit eget gravida cum sociis natoque penatibus et
+          magnis. Aliquet bibendum enim facilisis gravida neque convallis a cras
+          semper. Eu non diam phasellus vestibulum. Erat pellentesque adipiscing
+          commodo elit at imperdiet dui. Sodales ut eu sem integer vitae justo
+          eget. Tellus mauris a diam maecenas. Pulvinar mattis nunc sed blandit
+          libero volutpat. Rhoncus mattis rhoncus urna neque viverra justo nec
+          ultrices. Sed vulputate mi sit amet mauris commodo quis imperdiet.
+          Pharetra diam sit amet nisl suscipit adipiscing. Diam maecenas
+          ultricies mi eget mauris pharetra et ultrices neque. Feugiat pretium
+          nibh ipsum consequat nisl vel pretium lectus quam. Volutpat est velit
+          egestas dui id ornare arcu. In est ante in nibh mauris cursus mattis.
+          Pellentesque elit eget gravida cum. Purus viverra accumsan in nisl
+          nisi scelerisque eu. Nunc vel risus commodo viverra maecenas accumsan
+          lacus vel facilisis. Et sollicitudin ac orci phasellus egestas tellus
+          rutrum tellus. Pharetra vel turpis nunc eget lorem dolor. Dignissim
+          enim sit amet venenatis urna cursus eget nunc scelerisque. Ornare
+          aenean euismod elementum nisi quis eleifend quam. Augue eget arcu
+          dictum varius duis. Purus viverra accumsan in nisl nisi scelerisque eu
+          ultrices vitae. Elementum pulvinar etiam non quam lacus suspendisse
+          faucibus interdum. Porta non pulvinar neque laoreet suspendisse
+          interdum consectetur libero id. Neque convallis a cras semper auctor
+          neque vitae. Ultrices in iaculis nunc sed. Sed faucibus turpis in eu
+          mi bibendum neque egestas. Eleifend quam adipiscing vitae proin.
+          Aliquam malesuada bibendum arcu vitae elementum. Cursus in hac
+          habitasse platea dictumst. Rhoncus dolor purus non enim. Arcu non odio
+          euismod lacinia at quis. Velit dignissim sodales ut eu sem. Quam
+          viverra orci sagittis eu volutpat odio facilisis mauris. Semper quis
+          lectus nulla at volutpat. Pulvinar sapien et ligula ullamcorper
+          malesuada. Aliquam etiam erat velit scelerisque. Est sit amet
+          facilisis magna etiam tempor orci eu lobortis. Nullam non nisi est sit
+          amet facilisis.
+        </p>
+      </div>
     </main>
 
-    <footer class="modal-footer text-center border-top">
-      <div class="row">
-        <div class="col">
-          <ul class="list-unstyled">
-            <li>197183, г. Санкт-Петербург, ул. Савушкина, д. 21, 2-й этаж</li>
-            <li>
-              (c) 2008 — 2023 гг. ООО "ПрофМастер Северо-Запад" - ИНН:
-              7814784903, ОГРН: 1217800002045. Bce права защищены.
-            </li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul class="list-unstyled">
-            <li>
-              <a class="link-info" href="tel:+78120000000">+7(812)-000-00-00</a>
-            </li>
-            <li>
-              <a class="link-info" href="mailto:opalubka@pmg.su"
-                >opalubka@pmg.su</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul class="list-unstyled">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://t.me/andykenway"
-                target="_blank"
-              >
-                <img
-                  src="./img/social-icons/telegram.svg"
-                  alt="telegram"
-                  width="24"
-                  height="24"
-                />
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://wa.me/+79522320376"
-                target="_blank"
-              >
-                <img
-                  src="./img/social-icons/whatsapp.svg"
-                  alt="whatsapp"
-                  width="24"
-                  height="24"
-                />
-              </a>
-            </li>
-          </ul>
+    <footer class="border-top bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <ul class="list-unstyled text-start">
+              <li>
+                <p class="fs-5 text-light">
+                  196624, г Санкт-Петербург, п Шушары, ул Софийская, д 66 литера
+                  в, помещ 109
+                </p>
+              </li>
+              <li>
+                <p class="fs-5 text-light">
+                  (c) 2015 — 2024 гг. ООО "УНР-12" - ИНН: 7816283211, ОГРН:
+                  1157847304141. Bce права защищены.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <ul class="list-unstyled text-center">
+              <li class="fs-5">
+                <a class="link-info" href="tel:+78120000000">
+                  +7(812)-000-00-00
+                </a>
+              </li>
+              <li class="fs-5">
+                <a class="link-info" href="mailto:opalubka@pmg.su">
+                  my@email.ru
+                </a>
+              </li>
+              <li class="fs-5">
+                <a class="link-info" href="#"> Политика конфиденциальности </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4" id="footer-social-icons">
+            <ul class="list-unstyled text-center list-inline">
+              <li class="nav-item text-light list-inline-item col-1">
+                <a
+                  class="nav-link"
+                  href="https://t.me/andykenway"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    fill="currentColor"
+                    class="bi bi-telegram"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item text-light list-inline-item col-2">
+                <a
+                  class="nav-link"
+                  href="https://wa.me/+79522320376"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    fill="currentColor"
+                    class="bi bi-whatsapp"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
