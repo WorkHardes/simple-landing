@@ -38,3 +38,7 @@ main .gallery img {
 #gallery-popup .modal-img {
   width: 100%;
 }
+
+.opalubka-img-description {
+  opacity: 0;
+}
