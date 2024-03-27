@@ -6,14 +6,10 @@ header nav .navbar-collapse ul li {
   margin-left: 2em;
 }
 
-main .container h2:before {
+main h2:before {
   height: 4em;
   content: "";
   display: block;
-}
-
-footer .container {
-  padding-top: 4em;
 }
 
 main .carousel-item {
@@ -41,4 +37,14 @@ main .gallery img {
 
 .opalubka-img-description {
   opacity: 0;
+}
+
+footer .container {
+  padding-top: 4em;
+}
+
+footer .btn {
+  border-color: #fff;
+  border-width: 0px;
+  border-radius: 2em;
 }
