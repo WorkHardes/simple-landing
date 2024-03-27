@@ -20,11 +20,17 @@ main .carousel-item {
   height: 600px;
 }
 
+.carousel-inner img {
+  height: auto;
+  width: 100%;
+}
+
 main .gallery img {
   background: #fff;
-  padding: 15px;
+  padding: 5px;
   max-width: 100%;
   width: 100%;
+  object-fit: contain;
   cursor: pointer;
   border-radius: 4em;
 }
