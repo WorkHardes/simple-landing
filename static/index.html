@@ -97,8 +97,90 @@
     </header>
 
     <main>
-      <h2 class="text-center">Наше описание</h2>
+      <!-- Order -->
+      <h2 class="text-center">Заказ</h2>
+      <form class="container" id="orderForm">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 was-validated">
+            <div class="mb-3">
+              <label for="formworkType">Вид опалубки</label>
+              <input
+                class="form-control is-invalid"
+                id="formworkType"
+                placeholder="для стен"
+                required
+              ></input>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 was-validated">
+            <div class="mb-3">
+              <label for="totalArea">Общая плошадь м<sup>2</sup></label>
+              <input
+                class="form-control is-invalid"
+                id="totalArea"
+                placeholder="200"
+                required
+              ></input>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 was-validated">
+            <div class="mb-3">
+              <label for="address">Адрес</label>
+              <input
+                class="form-control is-invalid"
+                id="address"
+                placeholder="ул. Пушкина, д. 10"
+                required
+              ></input>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 was-validated">
+            <div class="mb-3">
+              <label for="customerName">Имя</label>
+              <input
+                class="form-control is-invalid"
+                id="customerName"
+                placeholder="______"
+                required
+              ></input>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 mb-3 was-validated">
+            <label for="customerPhoneNumber" class="form-label">Номер телефона</label>
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              id="customerPhoneNumber"
+              pattern="[0-9]{1,}[(-)\.\s()]*[0-9][0-9]$"
+              maxlength="22"
+              required
+              autocomplete="off"
+              placeholder="+7 (___) ___ ____ ____"
+            />
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 was-validated">
+            <div class="mb-3">
+              <label for="customerEmail">Email</label>
+              <input
+                class="form-control is-invalid"
+                id="customerEmail"
+                placeholder="example@example.com"
+                required
+              ></input>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary mx-3 col-lg-1 col-md-1 col-sm-1"
+            id="sendButton"
+          >
+            Отправить
+          </button>
+        </div>
+      </form>
+      <!-- Description -->
       <div class="container">
+        <h2 class="text-center">Наше описание</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus
